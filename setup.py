@@ -7,8 +7,7 @@ setup(
     license = 'BSD',
     description = "Django library for exporting Querysets as CSV files",
     author = 'Simon de Haan',
-    packages = find_packages('src'),
-    package_dir = {'': 'src'},
+    packages = ['export_csv'],
     install_requires = ['django',],
 )
 
