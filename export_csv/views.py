@@ -41,6 +41,8 @@ def export_csv(request, queryset, export_data, filter_by=None, file_name='export
         queryset = queryset.filter(**{'%s' % filter_by: object_id})
     
     def get_attr(object, attrs=None):
+        if object == None:
+            return not_available
         if attrs == None or attrs == []:
             return object
         current = attrs.pop(0)
